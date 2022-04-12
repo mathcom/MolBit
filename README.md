@@ -1,5 +1,7 @@
 # MolBit: De novo Drug Design via Binary Representations of SMILES for avoiding the Posterior Collapse Problem
 
+<img src="figs/overview_of_MolBit.png" alt="thumbnail" width="600px" />
+
 Many drug design studies have proposed combinations of VAEs and RNNs to generate SMILES strings.
 
 Although those RNN-VAE models have good validity performance, they suffer from the posterior collapse problem, in which every latent vector has an identical molecular property distribution.
