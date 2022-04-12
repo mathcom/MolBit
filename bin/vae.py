@@ -4,16 +4,6 @@ import torch.nn as nn
 import torch.nn.utils.rnn as rnn_utils
 
 
-"""
-참고사이트
-
-https://github.com/timbmg/Sentence-VAE
-
-https://aclanthology.org/N19-1021.pdf
-
-"""
-
-
 class CyclicalAnnealingScheduler(object):
     def __init__(self, T, M=4):
         super(CyclicalAnnealingScheduler, self).__init__()
