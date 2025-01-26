@@ -31,7 +31,7 @@ class SmilesEncoder(object):
         for i, smi in enumerate(smiles):
             for j, c in enumerate(smi):
                 res[i][j] = self.char2idx[c]
-        return torch.Tensor(res).long().to(self.device)
+        return torch.Tensor(res).long()
         
     def decode(self, encoded, trim=True): # encoded : list of indices
         res = []

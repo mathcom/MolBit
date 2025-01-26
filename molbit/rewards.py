@@ -6,7 +6,7 @@ from rdkit.Chem.rdmolfiles import MolFromSmiles, MolToSmiles
 from rdkit.Chem.rdMolDescriptors import CalcExactMolWt, CalcNumRings
 from rdkit.Chem.Crippen import MolLogP
 from rdkit.Chem import QED
-from sascorer import calculateScore # https://github.com/rdkit/rdkit/tree/master/Contrib/SA_Score
+from molbit.sascorer import calculateScore # https://github.com/rdkit/rdkit/tree/master/Contrib/SA_Score
  
 
 def calc_qed(smi):

@@ -216,7 +216,7 @@ class GumbelSmilesVAE(nn.Module):
     
     
     def load_model(self, path):
-        weights = torch.load(path)
+        weights = torch.load(path, weights_only=True)
         self.load_state_dict(weights)
 
 
@@ -229,3 +229,14 @@ class GumbelSmilesVAE(nn.Module):
         z = torch.from_numpy(z).to(self.device) # z.shape = (latent, )
         return z
 
+    def save_configs(self, path):
+        with open(path, 'w') as f:
+            f.write(f'vocab_size,{self.vocab_size}\n')
+            f.write(f'embedding_size,{self.embedding_size}\n')
+            f.write(f'hidden_size,{self.hidden_size}\n')
+            f.write(f'latent_size,{self.latent_size}\n')
+            f.write(f'categorical_size,{self.categorical_size}\n')
+            f.write(f'num_layers,{self.num_layers}\n')
+            f.write(f'sos_idx,{self.sos_idx}\n')
+            f.write(f'eos_idx,{self.eos_idx}\n')
+            f.write(f'pad_idx,{self.pad_idx}\n')

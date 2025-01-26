@@ -1,0 +1,26 @@
+name: molbit
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.9
+  - nvidia::libcublas
+  - pytorch-cuda=12.1
+  - pytorch=2.5.1
+  - numpy
+  - pandas
+  - jupyter
+  - tqdm
+  - matplotlib
+  - seaborn
+  - scikit-learn=1.5.2
+  - rdkit
+  - openeye::openeye-toolkits # for molscore
+  - prolif # for molscore
+  - openbabel # for molscore
+  - bioconda::smina=2017.11.9 # for molscore
+  - bioconda::reduce # for molscore
+  - dask # for molscore
+  - pip
+  - pip:
+    - molscore
